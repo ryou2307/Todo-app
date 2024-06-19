@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: cakephp-app
+    plan: free
+    env: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DATABASE_URL
+        value: "mysql://root: @hlocalhost:3306/todo-app"
+      - key: APP_ENV
+        value: "production"
+      - key: APP_DEBUG
+        value: "false"
