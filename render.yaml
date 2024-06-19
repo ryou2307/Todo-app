@@ -6,7 +6,7 @@ services:
     dockerfilePath: ./Dockerfile
     envVars:
       - key: DATABASE_URL
-        value: "mysql://username:password@hostname:port/database"
+        value: "mysql://root: @hlocalhost:3306/todo-app"
       - key: APP_ENV
         value: "production"
       - key: APP_DEBUG
