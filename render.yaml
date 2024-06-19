@@ -1,10 +1,9 @@
 services:
   - type: web
     name: cakephp-app
-    env: php
     plan: free
-    buildCommand: "/bin/sh bin/install-composer.sh && composer install --no-dev --optimize-autoloader"
-    startCommand: "apache2-foreground"
+    env: docker
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: DATABASE_URL
         value: "mysql://username:password@hostname:port/database"
